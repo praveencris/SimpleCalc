@@ -6,39 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/firstNumber"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="First Number"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/secondNumber"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Second Number"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/firstNumber"
-        app:layout_constraintStart_toStartOf="@+id/firstNumber"
-        app:layout_constraintTop_toBottomOf="@+id/firstNumber" />
-
     <Button
         android:id="@+id/buttonAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Add"
         android:onClick="onAdd"
+        android:text="@string/add"
         app:layout_constraintStart_toStartOf="@+id/secondNumber"
         app:layout_constraintTop_toBottomOf="@+id/secondNumber" />
 
@@ -47,8 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Sub"
         android:onClick="onSub"
+        android:text="@string/sub"
         app:layout_constraintStart_toEndOf="@+id/buttonAdd"
         app:layout_constraintTop_toTopOf="@+id/buttonAdd" />
 
@@ -57,8 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Div"
         android:onClick="onDiv"
+        android:text="@string/div"
         app:layout_constraintStart_toStartOf="@+id/buttonAdd"
         app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
 
@@ -67,10 +41,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Mul"
         android:onClick="onMul"
+        android:text="@string/mul"
         app:layout_constraintBottom_toBottomOf="@+id/buttonDiv"
         app:layout_constraintStart_toEndOf="@+id/buttonDiv" />
+
+    <EditText
+        android:id="@+id/firstNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/first_number"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/secondNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/second_number"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/firstNumber"
+        app:layout_constraintStart_toStartOf="@+id/firstNumber"
+        app:layout_constraintTop_toBottomOf="@+id/firstNumber"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/textViewResult"
@@ -78,8 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        tools:text="80"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         app:layout_constraintStart_toStartOf="@+id/secondNumber"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDiv" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiv"
+        tools:text="80" />
 </androidx.constraintlayout.widget.ConstraintLayout>
